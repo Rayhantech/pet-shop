@@ -5,11 +5,209 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pet Shop</title>
     <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header></header>
 
-    <main></main>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap" rel="stylesheet">
+
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Tailwind cdn -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+
+    <!-- Daisy UI cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+                'button-primary': '#FFDC26',
+                'primary-bg': '#FFF9F4',
+                'card-bg': '#F9DF8A',
+              },
+            },
+          },
+        }
+      </script>
+</head>
+<body class="sora-normal">
+    <header>
+        <nav>
+            <div class="navbar bg-primary-bg px-36">
+                <div class="navbar-start">
+                  <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-5 w-5"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M4 6h16M4 12h8m-8 6h16" />
+                      </svg>
+                    </div>
+                    <ul
+                      tabindex="0"
+                      class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                      <li><a>Item 1</a></li>
+                      <li>
+                        <a>Parent</a>
+                        <ul class="p-2">
+                          <li><a>Submenu 1</a></li>
+                          <li><a>Submenu 2</a></li>
+                        </ul>
+                      </li>
+                      <li><a>Item 3</a></li>
+                    </ul>
+                  </div>
+                  
+                    <img src="c1-assets/logo-header.png" alt="">
+                    <h1 class="mx-3 sora-normal text-2xl">Browse<span class="text-button-primary">4</span>4Pets</h1>
+            
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                  <ul class="menu menu-horizontal px-1">
+                    <li><a>Find a pet</a></li>
+                    <li><a>Breeds</a></li>
+                    <li><a>Contact us</a></li>
+                  </ul>
+                </div>
+                <div class="navbar-end hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1 gap-2">
+                        <li>
+                            <a class=""><i class="fa-regular fa-bell"></i></a>
+                        </li>
+                        <li>
+                            <a><i class="fa-solid fa-magnifying-glass"></i></a>
+                        </li>
+                        <li>
+                            <a class="btn btn-outline btn-warning">Login</a>
+                        </li>
+                        <li>
+                            <a class="btn bg-button-primary">Register</a>
+                        </li>
+                    </ul>
+                </div>
+              </div>
+        </nav>
+
+        <div class="banner-section lg:my-22 lg:mx-35">
+            <div class="bg-cover bg-center h-screen lg:h-screen" 
+            style="background-image: url('c1-assets/cat-big.png');">
+                <h1 class="adlam-display-regular text-6xl my-4">Pamper Your Pet,<br> Because They Deserve <br> the Bes</h1>
+                <p class="font-xl text-[#111111] my-6">
+                    Discover a world of treats, toys, and essentials handpicked for <br> your furry friends. Shop now and make tails wag with joy!
+                </p>
+                <button class="btn bg-button-primary">
+                    Find a pet
+                </button>
+            </div>
+
+        </div>
+    </header>
+    <main>
+        <section class="categories-section mt-35 mx-4 lg:mx-35">
+            <h1 class="adlam-display-regular text-4xl mb-12">Browse By Categories</h1>
+            <div class="grid grid-cols-2 lg:grid-cols-6 lg:gap-6">
+                <div class="card bg-card-bg w-50 shadow-xl items-center">
+                    <div class="avatar mt-8">
+                      <div class="ring-primar bg-white ring-white   w-16 rounded-full ring ring-offset-8">
+                          <img src="c1-assets/dog-cartoon.png"/>
+                      </div>
+                      </div>
+                    <div class="card-body items-center text-center">
+                      <h2 class="adlam-display-regular">Dog</h2>
+                      <p>3 items</p>
+                    </div>
+                </div>
+
+                <div class="card bg-card-bg w-50 shadow-xl items-center">
+                    <div class="avatar mt-8">
+                      <div class="ring-primar bg-white ring-white   w-16 rounded-full ring ring-offset-8">
+                          <img src="c1-assets/fish-cartoon.png"/>
+                      </div>
+                      </div>
+                    <div class="card-body items-center text-center">
+                      <h2 class="adlam-display-regular">Fish</h2>
+                      <p>3 items</p>
+                    </div>
+                </div>
+              
+
+         
+                <div class="card bg-card-bg w-50 shadow-xl items-center">
+                    <div class="avatar mt-8">
+                      <div class="ring-primar bg-white ring-white   w-16 rounded-full ring ring-offset-8">
+                          <img src="c1-assets/cat-cartoon.png"/>
+                      </div>
+                      </div>
+                    <div class="card-body items-center text-center">
+                      <h2 class="adlam-display-regular">Cat</h2>
+                      <p>3 items</p>
+                    </div>
+                </div>    
+               
+
+         
+                <div class="card bg-card-bg w-50 shadow-xl items-center">
+                    <div class="avatar mt-8">
+                      <div class="ring-primar bg-white ring-white   w-16 rounded-full ring ring-offset-8">
+                          <img src="c1-assets/bird-cartoon.png"/>
+                      </div>
+                      </div>
+                    <div class="card-body items-center text-center">
+                      <h2 class="adlam-display-regular">Birds</h2>
+                      <p>3 items</p>
+                    </div>
+                </div>    
+              
+
+            
+                <div class="card bg-card-bg w-50 shadow-xl items-center">
+                    <div class="avatar mt-8">
+                      <div class="ring-primar bg-white ring-white   w-16 rounded-full ring ring-offset-8">
+                          <img src="c1-assets/mouse-cartoon.png"/>
+                      </div>
+                      </div>
+                    <div class="card-body items-center text-center">
+                      <h2 class="adlam-display-regular">Small pet</h2>
+                      <p>3 items</p>
+                    </div>
+                </div>    
+               
+
+           
+                <div class="card bg-card-bg w-50 shadow-xl items-center">
+                    <div class="avatar mt-8">
+                      <div class="ring-primar bg-white ring-white   w-16 rounded-full ring ring-offset-8">
+                          <img src="c1-assets/rabbit-cartoon.png"/>
+                      </div>
+                      </div>
+                    <div class="card-body items-center text-center">
+                      <h2 class="adlam-display-regular">Rabbit</h2>
+                      <p>2 items</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+    </main>
 
     <footer></footer>
 </body>
